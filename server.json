@@ -1,7 +1,7 @@
 {
   //en  User under which FCF processes are started
   //ru  Имя пользователя от которого будет запускаться приложение FCF
-  "user":            "phoenix",
+  "user":            "www-data",
 
   "bind4":           "",
 
