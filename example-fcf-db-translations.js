@@ -7,7 +7,7 @@ fcf.module({
   ],
   module: function(application) {
     application.setSettings({
-      port:                       8081,
+      port:                       8080,
       projectionDirectories:      ["projections"],
       packages:                   ["fcfManagement"],
       fileСaching:                true,
