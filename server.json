@@ -1,0 +1,27 @@
+{
+  //en  User under which FCF processes are started
+  //ru  Имя пользователя от которого будет запускаться приложение FCF
+  "user":            "phoenix",
+
+  "bind4":           "",
+
+  "bind6":           "::1",
+
+  "numberRequests":  64,
+
+  "port":            "80",
+
+  "maxRequestTimeout":  10,
+
+  "maxResponseTimeout":  600,
+
+  "processes": {
+    "default": {
+      "processes":     8,
+      "script":        "example-fcf-db-translations.js",
+      "data_ports":    [3535],
+      "control_ports": [4535],
+      "max_memory":    120
+    }
+  }
+}

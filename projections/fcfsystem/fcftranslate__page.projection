@@ -1,0 +1,63 @@
+{
+  "alias": "fcftranslate__page",
+  "table": "fcftranslate__page",
+  "title": "translate",
+  "key": "fcftranslate__key",
+  "order": [
+    {
+      "type": "field",
+      "field": "id",
+      "order": "asc"
+    }
+  ],
+  "dbSync": true,
+  "inner": true,
+  "fields": [
+    {
+      "alias": "fcftranslate__key",
+      "field": "fcftranslate__key",
+      "title": "fcftranslate__key",
+      "type": "bigint",
+      "notAdd": true,
+      "notEdit": true,
+      "autoIncrement": true
+    },
+    {
+      "alias": "fcftranslate__language",
+      "field": "fcftranslate__language",
+      "type": "string",
+      "maxSize": 2
+    },
+    {
+      "alias": "id",
+      "field": "id",
+      "type": "bigint",
+      "notAdd": true,
+      "notEdit": true,
+      "title": "id",
+      "emptyAsNull": true
+    },
+    {
+      "alias": "title",
+      "field": "title",
+      "title": "!{Title}!",
+      "type": "string",
+      "maxSize": 255,
+      "emptyAsNull": true
+    },
+    {
+      "alias": "description",
+      "field": "description",
+      "title": "!{Description}!",
+      "type": "string",
+      "emptyAsNull": true
+    },
+    {
+      "alias": "content",
+      "field": "content",
+      "title": "!{Content}!",
+      "type": "text",
+      "emptyAsNull": true
+    }
+  ]
+}

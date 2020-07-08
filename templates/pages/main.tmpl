@@ -1,0 +1,15 @@
+//~OPTIONS
+{
+  extends: "templates/pages/base.tmpl",
+}
+
+//~ARGUMENTS body
+{
+  fcfWrapper: false,
+  record: fcf.arg("programmable"),
+}
+
+//~TEMPLATE body
+<h1>${{args.record.title}}$</h1>
+<hr>
+${{args.record.content}}$

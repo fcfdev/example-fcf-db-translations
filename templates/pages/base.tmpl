@@ -1,0 +1,40 @@
+//~OPTIONS
+{
+  
+}
+
+//~ARGUMENTS
+{
+  fcfWrapper: false,
+  fcfInclude: ["/css/styles.css"],
+}
+
+
+//~TEMPLATE
+<html>
+<head>
+  @{{ render.header(); }}@
+</head>
+<body>
+  <div class="head">
+    <span class="head-item">!{{Language}}!: @{{ render.template("@controls:language-selector") }}@ </span>
+    <span class="head-item"><a href="/fcfpackages/fcfManagement">!{{Settings}}!</a></span>
+  </div>
+  <div class="body">
+  @{{ render.template({template: "*body"}); }}@
+  </div>
+
+  <script>
+    fcf.liven(function(a_error){
+    });
+  </script>
+</body>
+</html>
+
+//~ARGUMENTS body
+{
+
+}
+
+//~TEMPLATE body
+<h1>FCF Application</h1>

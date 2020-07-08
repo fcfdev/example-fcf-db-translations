@@ -1,0 +1,14 @@
+.head{
+  text-align: right;
+  background-color: #ecf1f7;
+  padding: 2px 8px 8px 8px;
+  color: #5f5f5f;
+}
+
+.head-item{
+  padding-right: 8px;
+}
+
+.body{
+  padding: 1em 5em 5em 5em;
+}

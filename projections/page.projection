@@ -1,0 +1,64 @@
+{
+  alias:  "page",
+  table:  "page",
+
+  title:  "Page",
+  singleTitle: "${record.title}$",
+  singleDescription: "${record.description}$",
+
+  description:  "Simple page",
+
+  connectionGroup: "default",
+  dbSync: true,
+
+  order: [
+    {
+      type: "field",
+      field: "id",
+      order: "asc",
+    },
+  ],
+
+  key: "id",
+
+  fields:[
+    {
+      alias: 'id',
+      field: 'id',
+      type: 'bigint',
+      notAdd: true,
+      notEdit: true,
+      autoIncrement: true,
+    },
+    {
+      alias: 'alias',
+      field: 'alias',
+      title: '!{Alias}!',
+      description: '!{Machine alias}!',
+      type: 'string',
+    },
+    {
+      alias: 'title',
+      field: 'title',
+      title: '!{Title}!',
+      type:  'string',
+      maxSize: 255,
+      notEmpty: true,
+      translate: true,
+    },
+    {
+      alias: 'description',
+      field: 'description',
+      title: '!{Description}!',
+      type:  'string',
+      translate: true,
+    },
+    {
+      alias: 'content',
+      field: 'content',
+      title: '!{Content}!',
+      type:  'text',
+      translate: true,
+    },
+  ]
+}
