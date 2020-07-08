@@ -1,4 +1,6 @@
 # example-fcf-db-translations
+How to launch the project:
+
 1) Install FCF
 2) To run the example, run the following commands:
 $ cd ~
