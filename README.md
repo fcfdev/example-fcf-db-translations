@@ -9,6 +9,8 @@ $ cd ~
 
 $ git clone https://github.com/fcfdev/example-fcf-db-translations
 
+$ cd example-fcf-db-translations
+
 MYSQL> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root;
 
 $ fcfmngr create-db ./example-fcf-db-translations.js
