@@ -5,18 +5,18 @@ How to launch the project:
 
 2) To run the example, run the following commands:
 
-$ cd ~
+    $ cd ~
 
-$ git clone https://github.com/fcfdev/example-fcf-db-translations
+    $ git clone https://github.com/fcfdev/example-fcf-db-translations
 
-$ cd example-fcf-db-translations
+    $ cd example-fcf-db-translations
 
-MYSQL> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root;
+    MYSQL> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root;
 
-$ fcfmngr create-db ./example-fcf-db-translations.js
+    $ fcfmngr create-db ./example-fcf-db-translations.js
 
-$ mysql -u root -p example-fcf-db-translations < example-fcf-db-translations.backup.sql
+    $ mysql -u root -p example-fcf-db-translations < example-fcf-db-translations.backup.sql
 
 3) Run project
 
-$ fcfnode example-fcf-db-translations.js
+    $ fcfnode example-fcf-db-translations.js
