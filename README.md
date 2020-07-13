@@ -15,8 +15,6 @@ MYSQL> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'r
 
 $ fcfmngr create-db ./example-fcf-db-translations.js
 
-$ cd example-fcf-db-translations
-
 $ mysql -u root -p example-fcf-db-translations < example-fcf-db-translations.backup.sql
 
 3) Run project
