@@ -1,0 +1,1 @@
+fcf.module({name:"fcfControls:templates/navigator.wrapper.js",dependencies:["fcf:NRender/Wrapper.js"],module:function(Wrapper){return class extends Wrapper{constructor(a_initializeOptions){super(a_initializeOptions)}onArg(a_argName,a_value,a_suffix){}}}});

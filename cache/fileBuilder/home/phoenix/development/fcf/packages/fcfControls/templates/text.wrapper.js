@@ -1,0 +1,1 @@
+fcf.module({name:"fcfControls:templates/text.wrapper.js",dependencies:["fcf:NRender/Wrapper.js"],module:function(Wrapper){return class extends Wrapper{constructor(a_initializeOptions){super(a_initializeOptions)}getCurrentData(){return this.getDomElement().innerHTML}setArg(a_value){this.prototype.setArg.call(this,a_value),this.getDomElement().innerHTML=a_value}}}});
