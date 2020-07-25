@@ -1,1 +1,0 @@
-fcf.module({name:"fcfControls:templates/view.hooks.js",dependencies:[],module:function(){return{hooksProgramableArgument:{except:a_taskInfo=>{let mode=a_taskInfo.args.mode.split(".")[0];return!("add"!=mode||!a_taskInfo.args.view.notAdd)||!("edit"!=mode||!a_taskInfo.args.view.notEdit)}}}}});

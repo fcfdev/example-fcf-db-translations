@@ -1,1 +1,0 @@
-fcf.module({name:"fcfControls:templates/multiselect+items.wrapper.js",dependencies:["fcf:NRender/Wrapper.js"],module:function(Wrapper){return class extends Wrapper{constructor(a_initializeOptions){super(a_initializeOptions)}onArg(){this.update()}}}});
