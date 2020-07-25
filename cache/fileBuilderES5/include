@@ -924,7 +924,7 @@ fcf.module({
         var currentParts = this._views;
 
         for (var i = 0; i < partArr.length; ++i) {
-          if (partArr[i] != "+") {
+          if (partArr[i] != "*") {
             if (!(partArr[i] in currentParts.parts)) currentParts.parts[partArr[i]] = {
               parts: {},
               cur: {},
@@ -3155,6 +3155,14 @@ fcf.module({
         var defaultThemeName = a_options.theme ? a_options.theme : "defaultTheme";
         var defaultTheme = fcf.application.getThemes().getTheme(defaultThemeName, true);
         var externalArgs = typeof a_options.externalArgs == "object" ? a_options.externalArgs : {};
+        var isExternalEmpty = true;
+
+        for (var _k2 in externalArgs) {
+          externalArgs[_k2].__innerFcfPostRemove = true;
+          isExternalEmpty = false;
+        }
+
+        var isRootCall = !a_options.state;
         var state = a_options.state ? a_options.state : {
           theme: defaultTheme,
           defaultTheme: defaultTheme,
@@ -3307,6 +3315,18 @@ fcf.module({
           if (breakExecution) {
             a_act.complete(a_result);
             return;
+          }
+
+          if (!isExternalEmpty && isRootCall) {
+            var rm = [];
+
+            for (var _k3 in state.args) {
+              if (state.args[_k3].__innerFcfPostRemove) rm.push(_k3);
+            }
+
+            for (var i = 0; i < rm.length; ++i) {
+              delete state.args[rm[i]];
+            }
           }
 
           var args = resultArgs;
