@@ -1,5 +1,5 @@
 # example-fcf-db-translations
-How to launch the project:
+How to launch the project under linux:
 
 1) Install FCF
 
