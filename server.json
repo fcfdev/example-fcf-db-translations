@@ -1,11 +1,11 @@
 {
   //en  User under which FCF processes are started
   //ru  Имя пользователя от которого будет запускаться приложение FCF
-  "user":            "test",
+  "user":            "",
 
   //en  Used only for Windows systems
   //ru  Используется только для Windows систем
-  "password":        "123",
+  "password":        "",
 
   //en  IPV4 address of the server's network interface. If an empty string is set requests are accepted from all interfaces
   //ru  IP4 адрес сетевого интерфайса сервера. Если задана пустая строка запросы принимаются со всех интерфейсов
