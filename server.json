@@ -34,8 +34,8 @@
 
   "processes": {
     "default": {
-      //en  Number of running node applications
-      //ru  Количество запущенных node приложений
+      //en  Number of running node applications. The minimum value of 2
+      //ru  Количество запущенных node приложений. Минимальное значение 2
       "processes":     4,
       //en  The application's nodejs script to run
       //ru  Запускаемый скрипт nodejs приложения
@@ -50,7 +50,7 @@
       "control_ports": [4535],
       //en  Maximum size of RSS memory used by the process
       //ru  Максимальный размер RSS памяти занимаемой процессом
-      "max_memory":    120
+      "max_memory":    150
     }
   }
 }
