@@ -32,6 +32,12 @@
   //ru  Таймаут ожидания ответа от сервера
   "maxResponseTimeout":  600,
 
+  //en  Connection maintenance timeout (Keep-Alive: timeout). 
+  //en  If set to zero the connection is closed when the response is returned
+  //ru  Таймаут ожидания поддержания соединения (Keep-Alive: timeout). 
+  //ru  Если равен нулю соединение закрывается при отдачи ответа
+  "keapAliveTimeout":  15,
+
   "processes": {
     "default": {
       //en  Number of running node applications. The minimum value of 2
