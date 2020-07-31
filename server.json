@@ -1,27 +1,62 @@
 {
   //en  User under which FCF processes are started
   //ru  Имя пользователя от которого будет запускаться приложение FCF
-  "user":            "www-data",
+  "user":            "",
 
+  //en  Used only for Windows systems
+  //ru  Используется только для Windows систем
+  "password":        "",
+
+  //en  IPV4 address of the server's network interface. If an empty string is set requests are accepted from all interfaces
+  //ru  IP4 адрес сетевого интерфайса сервера. Если задана пустая строка запросы принимаются со всех интерфейсов
   "bind4":           "",
 
+
+  //en  IPV6 address of the server's network interface
+  //ru  IP6 адрес сетевого интерфайса сервера
   "bind6":           "::1",
 
-  "numberRequests":  64,
+  //en  Length of the request queue
+  //ru  Длина очереди запросов
+  "numberRequests":  32,
 
+  //en  HTTP server port
+  //ru  Порт HTTP сервера
   "port":            "80",
 
+  //en  Timeout for receiving a request from a client
+  //ru  Таймаут на получение запроса от клиента
   "maxRequestTimeout":  10,
 
+  //en  Timeout waiting for a response from the server
+  //ru  Таймаут ожидания ответа от сервера
   "maxResponseTimeout":  600,
+
+  //en  Connection maintenance timeout (Keep-Alive: timeout). 
+  //en  If set to zero the connection is closed when the response is returned
+  //ru  Таймаут ожидания поддержания соединения (Keep-Alive: timeout). 
+  //ru  Если равен нулю соединение закрывается при отдачи ответа
+  "keapAliveTimeout":  15,
 
   "processes": {
     "default": {
-      "processes":     8,
+      //en  Number of running node applications. The minimum value of 2
+      //ru  Количество запущенных node приложений. Минимальное значение 2
+      "processes":     4,
+      //en  The application's nodejs script to run
+      //ru  Запускаемый скрипт nodejs приложения
       "script":        "example-fcf-db-translations.js",
+      //en  HTTP ports of nodejs applications. Set as an array. If all elements are omitted the ports are calculated incrementally
+      //ru  HTTP порты nodejs приложений. Задаются массивом. Если все элементы не указаны порты рассчитываются инкрементом
       "data_ports":    [3535],
+      //en  Ports for transmitting internal information about the operation of nodejs applications. 
+      //en  Set as an array. If all elements are omitted the ports are calculated incrementally
+      //ru  Порты для передачи внутренней информации о работе nodejs приложений.
+      //ru  Задаются массивом. Если все элементы не указаны порты рассчитываются инкрементом
       "control_ports": [4535],
-      "max_memory":    120
+      //en  Maximum size of RSS memory used by the process
+      //ru  Максимальный размер RSS памяти занимаемой процессом
+      "max_memory":    150
     }
   }
 }
