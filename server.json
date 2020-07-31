@@ -22,7 +22,7 @@
 
   //en  HTTP server port
   //ru  Порт HTTP сервера
-  "port":            "80",
+  "port":            80,
 
   //en  Timeout for receiving a request from a client
   //ru  Таймаут на получение запроса от клиента
