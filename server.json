@@ -1,7 +1,7 @@
 {
   //en  User under which FCF processes are started
   //ru  Имя пользователя от которого будет запускаться приложение FCF
-  "user":            "",
+  "user":            "www-data",
 
   //en  Used only for Windows systems
   //ru  Используется только для Windows систем
