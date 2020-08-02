@@ -36,7 +36,7 @@
   //en  If set to zero the connection is closed when the response is returned
   //ru  Таймаут ожидания поддержания соединения (Keep-Alive: timeout). 
   //ru  Если равен нулю соединение закрывается при отдачи ответа
-  "keapAliveTimeout":  15,
+  "keepAliveTimeout":  5,
 
   "processes": {
     "default": {
